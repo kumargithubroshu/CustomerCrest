@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+      <li class =" navbar-list">
+        <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+      </li> &nbsp;&nbsp;
+      <li class =" navbar-list">
+        <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+    </li>
+    </ul>
+</nav>
+<div class="container">
+    <h2 style="color: darkcyan; text-align: center;">BMI Calculator</h2>
+    <form [formGroup]="bmiCal" (ngSubmit)="calculateBMI()">
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" class="form-control" id="weight" formControlName="weight" name="weight">
+      </div>
+      <div class="form-group">
+        <label for="height">Height (cm)</label>
+        <input type="number" class="form-control" id="height" formControlName="height" name="height">
+      </div>
+      <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+    <div class="result">
+      <h4 style="color: crimson;">Your BMI is {{ bmi }}</h4>
+      <!-- This is considered as {{ weightCategory }} -->
+    </div>
+  </div>

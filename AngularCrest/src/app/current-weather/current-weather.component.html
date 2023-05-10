@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/upload-files"  class="nav-link" style="text-align: center;"><mat-icon matTooltip="Upload" matTooltipPosition="above" style="font-size: 24px; color: palevioletred;">cloud_upload</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-weather" matTooltip="Weather" matTooltipPosition="below" class="nav-link"><mat-icon>wb_cloudy</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-for-cast-weather" matTooltip="ForCast-Weather" matTooltipPosition="below" class="nav-link"><mat-icon>wb_iridescent</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav><br>
+<div >
+    <div>
+        <label> <b> Name : </b></label> {{weather.name}}
+    </div>
+    <div>
+        <label> <b> Humidity : </b></label> {{weather.humidity}}%
+    </div>
+    <div>
+        <label> <b> Temperature : </b></label> {{weather.temperature}}°C 
+    </div>
+    <div>
+        <label> <b> Date : </b></label> {{weather.date | date :'medium'}}
+    </div>
+</div>
+<br>
+<br>
+<!-- second details -->
+<div >
+    <div>
+        <label> <b> Name : </b></label> {{weather1.name}}
+    </div>
+    <div>
+        <label> <b> Humidity : </b></label> {{weather1.humidity}}%
+    </div>
+    <div>
+        <label> <b> Temperature : </b></label> {{weather1.temperature}}°C 
+    </div>
+    <div>
+        <label> <b> Date : </b></label> {{weather1.date | date :'medium'}}
+    </div>
+</div>
+<br>
+<br>
+<!-- Third details -->
+<div >
+    <div>
+        <label> <b> Name : </b></label> {{weather2.name}}
+    </div>
+    <div>
+        <label> <b> Humidity : </b></label> {{weather2.humidity}}%
+    </div>
+    <div>
+        <label> <b> Temperature : </b></label> {{weather2.temperature}}°C 
+    </div>
+    <div>
+        <label> <b> Date : </b></label> {{weather2.date | date :'medium'}}
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/upload-files"  class="nav-link" style="text-align: center;"><mat-icon matTooltip="Upload" matTooltipPosition="above" style="font-size: 24px; color: palevioletred;">cloud_upload</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav>
+<br>
+<h2> View Todo </h2>
+<div >
+    <div>
+        <label> <b> ID : </b></label> {{viewData.id}}
+    </div>
+    <div>
+        <label> <b> Todo : </b></label> {{viewData.todo}}
+    </div>
+    <div>
+        <label> <b> Description : </b></label> {{viewData.description}}
+    </div>
+    <div>
+        <label> <b> Completed : </b></label> {{viewData.completed}}
+    </div>
+    <div>
+        <label> <b> CreatedAt : </b></label> {{viewData.createdAt}}
+    </div>
+    <div>
+        <label> <b> UpdatedAt : </b></label> {{viewData.updatedAt}}
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+<div style="background-color: burlywood; margin-right: 1730px;">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/calculate-bmi"  class="nav-link" style="text-align: center;">CHECK BMI</a>
+        </li>
+    </ul>
+</div>

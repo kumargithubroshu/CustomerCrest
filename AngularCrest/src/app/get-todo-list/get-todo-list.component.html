@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/create-todo" matTooltip="Create-Todo" matTooltipPosition="below"  class="nav-link"><mat-icon>create</mat-icon></a>
+        </li> &nbsp; &nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/upload-files"  class="nav-link" style="text-align: center;"><mat-icon matTooltip="Upload" matTooltipPosition="above" style="font-size: 24px; color: white;">cloud_upload</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-weather" matTooltip="Weather" matTooltipPosition="below" class="nav-link"><mat-icon>wb_cloudy</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-paint" matTooltip="Paint" matTooltipPosition="below" class="nav-link"><mat-icon>color_lens</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav>
+<div style="margin-left: 80px; margin-right: 50px; margin-top: 30px;">
+<h2 class="abc"> Employees- List !!! </h2>
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Todo</th>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of allData | paginate: { itemsPerPage: siz, currentPage: pag}">
+            <!-- <tr > -->
+            <td>{{t.id}}</td> 
+            <td>{{t.todo}}</td> 
+            <td>{{t.description}}</td>
+            <td>{{t.completed}}</td>
+            <td>{{t.createdAt}}</td> 
+            <td>{{t.updatedAt}}</td>
+            <td>
+                <button (click) = "updateTodo(t)" class = "btn btn-info"> <mat-icon matTooltip="Update" matTooltipPosition="above" style="font-size: 24px; color: purple;">update</mat-icon></button>
+                <button (click) = "deleteTodo(t.id)" class = "btn btn-danger" style = "margin-left: 10px"> Delete </button>
+                <button (click) = "viewTodo(t.id)" class = "btn btn-info" style = "margin-left: 10px"> <mat-icon matTooltip="View" matTooltipPosition="above" style="font-size: 24px; color: orange;">visibility</mat-icon>
+                </button>
+            </td>           
+        </tr>
+    </tbody>
+</table>
+<div class="text-right">
+    <pagination-controls (pageChange)="pag = $event"></pagination-controls>
+   </div>
+</div>
+
+

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/upload-files"  class="nav-link" style="text-align: center;"><mat-icon matTooltip="Upload" matTooltipPosition="above" style="font-size: 24px; color: palevioletred;">cloud_upload</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-current-weather" matTooltip="Current-Weather" matTooltipPosition="below" class="nav-link"><mat-icon>wb_sunny</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav>
+<br>
+<form (submit)="onSubmit()">
+    <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city name" />
+    <button type="submit">Get Weather</button>
+  </form>
+  <br>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+        <th>City</th>
+        <th>Humidity</th>
+        <th>Temperature</th>
+        <th>Date</th>
+        <th>Wind</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let wea of weather ">
+        <td>{{wea.city}}</td> 
+        <td>{{wea.humidity}}%</td> 
+        <td>{{wea.temperature}}℃</td>
+        <td>{{wea.date | date:'medium'}}</td>    
+        <td>{{wea.wind}}°F</td>   
+        <td>{{wea.description}}</td>  
+    </tr>
+</tbody>
+</table>

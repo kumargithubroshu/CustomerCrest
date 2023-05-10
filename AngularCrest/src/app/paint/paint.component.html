@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/upload-files"  class="nav-link" style="text-align: center;"><mat-icon matTooltip="Upload" matTooltipPosition="above" style="font-size: 24px; color: palevioletred;">cloud_upload</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/app-current-weather" matTooltip="Current-Weather" matTooltipPosition="below" class="nav-link"><mat-icon>wb_sunny</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="paint">
+        <div class="options-container">
+        </div>
+        <div style="margin-left: 40%;">
+            <a  (click)="rectangle()"><mat-icon>crop_square</mat-icon></a>
+            <a  (click)="square()"><mat-icon>crop_7_5</mat-icon></a>
+            <a  (click)="ellipse()"><mat-icon>panorama_fish_eye</mat-icon></a>
+            <a  (click)="circle()"><mat-icon>panorama_fish_eye</mat-icon></a>
+            <a  (click)="triangle()"><mat-icon>change_history</mat-icon></a>
+            <a  (click)="line()"><mat-icon>remove</mat-icon></a>
+            <a> <mat-icon>edit</mat-icon></a>
+            
+            <a (click)="deleteAll()"><mat-icon>delete</mat-icon></a>
+        </div>
+        <div style="background-color:gray" id="drawing-field" (click)="draw_shape()"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="options"> -->
+
+                
+    <!-- <a (click)="deleteAll()"><i class="fa fa-fw fa-eraser"></i> Delete all</a>   
+        <a  (click)="deleteSelected([])"><mat-icon>delete</mat-icon></a>
+         &#9645; //  &#9633;  // &#x2B2D;  // &#9711; //  &#9722;  // &#10006;    // <i class="fa fa-fw fa-eraser">
+
+            
+         </i>-->
+
+<!-- </nav> -->
+<!-- <div class="color-pickers">
+    <a><input type="color" id="pick" (click)="pick()" value="#f6f82" /> Color</a>
+    <a (click)="fill([])"><i class="fa-solid fa-fill-drip"></i> Fill</a>
+</div> -->

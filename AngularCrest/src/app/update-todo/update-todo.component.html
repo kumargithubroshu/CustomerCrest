@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class = "navbar-nav">
+        <li class =" navbar-list">
+            <a routerLink ="/get-todo-list" matTooltip="Todo-List" matTooltipPosition="below" class="nav-link"><mat-icon>arrow_back</mat-icon></a>
+        </li> &nbsp;&nbsp;
+        <li class =" navbar-list">
+            <a routerLink ="/login" matTooltip="LogOut" matTooltipPosition="below" class="nav-link"><mat-icon>logout</mat-icon></a>
+        </li>
+    </ul>
+</nav>
+<div class="col-md-4 offset-md-4">
+    <h2 style="margin-left: 10%; color:cadetblue; text-align: center;" >Update Todo</h2>
+    <form [formGroup]="updateForm" (ngSubmit) = "onSubmit4()">
+    
+        <div class="mb-3">
+            <input type="text" class="form-control" id="id" formControlName="id" placeholder="ID">
+        </div>
+    
+        <div class="mb-3">
+             <input type="text" class="form-control" id="todo" formControlName="todo" placeholder="Todo">
+        </div>
+    
+        <div class="mb-3">
+              <input type="text" class="form-control" id="description" formControlName="description" placeholder="Description">
+        </div>
+    
+        <div class="mb-3">
+             <input type="text" class="form-control" id="completed" formControlName="completed" placeholder="Completed">
+        </div>
+
+        <button class="btn btn-success" type = "submit">Update</button>
+    </form>
+    </div>
